@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+  <h1>Enter Your Name</h1>
+
+  <form id="nameForm">
+    <input type="text" id="nameInput" placeholder="Your Name" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <p id="result">Your name will appear here.</p>
+
+  <script>
+    const form = document.getElementById('nameForm');
+    const input = document.getElementById('nameInput');
+    const result = document.getElementById('result');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const userInput = input.value;
+
+      if (!userInput.trim()) {
+        alert('Please enter a name.');
+        return;
+      }
+      result.innerHTML = `Hello, ${userInput}!`;
+
+      input.value = '';
+    });
+  </script>
+
+</body>
+</html>

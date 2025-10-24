@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Basic HTML - POST</title>
+</head>
+<body>
+  <h1>Simple Form (POST + file)</h1>
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <p>Enter your name:</p>
+    <input type="text" name="username" placeholder="Your name" required>
+
+    <p>Upload a file:</p>
+    <input type="file" name="fileUpload">
+
+    <br><br>
+    <button type="submit">Upload</button>
+  </form>
+</body>
+</html>
